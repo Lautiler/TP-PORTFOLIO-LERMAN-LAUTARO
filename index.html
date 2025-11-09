@@ -9,12 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
   <main>
     <!-- ========== PORTADA ========== -->
     <section id="cover" class="cover">
-      <svg class="curve" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+      <svg class="curve" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0,0H1920V1080H0V0Z M1100,0C1500,300 1500,780 1100,1080H1920V0Z" fill="#181515"/>
         <path d="M0,0H1920V1080H0V0Z M1180,0C1580,300 1580,780 1180,1080H1920V0Z" fill="#141212"/>
       </svg>
@@ -32,10 +31,11 @@
       <a href="#about" class="next">↓</a>
     </section>
 
-    <!-- ========== SOBRE MÍ ========== -->
+    <!-- ========== PÁGINA 01 — SOBRE MÍ ========== -->
     <section id="about" class="about">
-      <div class="spine"></div>
+      <div class="spine" aria-hidden="true"></div>
 
+      <!-- Izquierda -->
       <div class="left-page">
         <div class="chapter">01</div>
         <h2 class="headline">sobre mí</h2>
@@ -43,28 +43,80 @@
         <div class="intro">
           <p>Hola, soy Lautaro 👋</p>
           <p>
-            Estudiante de Administración con una<br>
-            gran curiosidad por el desarrollo digital.<br>
-            Me interesa entender cómo la tecnología<br>
-            puede transformar la forma en que<br>
+            Estudiante de Administración con una gran curiosidad por el desarrollo digital.
+            Me interesa entender cómo la tecnología puede transformar la forma en que
             gestionamos, decidimos y creamos valor.
           </p>
         </div>
 
         <div class="left-footer">
           <span>📍 Buenos Aires, Argentina</span>
-          <i class="sep">•</i>
+          <span class="sep">•</span>
           <span>🎓 Licenciatura en Administración — En curso</span>
-          <i class="sep">•</i>
+          <span class="sep">•</span>
           <span>💡 Intereses: Estrategia, Innovación, Tecnología</span>
         </div>
       </div>
 
+      <!-- Derecha: foto -->
       <div class="right-page">
         <figure class="portrait-block">
-          <img src="tu-foto.png" alt="Lautaro Lerman" class="portrait" />
-          <figcaption>“Busco integrar la gestión empresarial con la innovación tecnológica para crear soluciones simples y efectivas”.</figcaption>
+          <img src="fotos/captura.png" alt="Lautaro Lerman" class="portrait" />
+          <figcaption>
+            “Busco integrar la gestión empresarial con la innovación tecnológica para crear soluciones simples y efectivas”.
+          </figcaption>
         </figure>
+      </div>
+    </section>
+
+    <!-- ========== PÁGINA 02 — HABILIDADES ========== -->
+    <section id="skills" class="skills">
+      <div class="spine" aria-hidden="true"></div>
+
+      <!-- Izquierda -->
+      <div class="skills-left">
+        <div class="chapter">02</div>
+        <h2 class="skills-title">Habilidades</h2>
+
+        <div class="skills-block">
+          <h3>Educación</h3>
+          <p>Licenciatura en Administración<br>En curso</p>
+        </div>
+
+        <div class="skills-block">
+          <h3>Idiomas</h3>
+          <p>Español &nbsp;&nbsp;&nbsp; Inglés &nbsp;&nbsp;&nbsp; Hebreo</p>
+        </div>
+
+        <div class="skills-block">
+          <h3>Intereses</h3>
+          <p>Estrategia, Innovación y Tecnología</p>
+        </div>
+      </div>
+
+      <!-- Derecha -->
+      <div class="skills-right">
+        <h2 class="skills-soft-title">Software</h2>
+
+        <!-- CONTENEDOR PARA LOS LOGOS / SCREENS -->
+        <div class="software-grid">
+          <!-- Podés poner tus propios screens o logos acá -->
+          <img src="fotos/vs.png" alt="Visual Studio Code">
+          <img src="fotos/notion.png" alt="Notion">
+          <img src="fotos/github.png" alt="GitHub">
+          <img src="fotos/figma.png" alt="Figma">
+          <img src="fotos/mysql.png" alt="MySQL">
+          <img src="fotos/atm.png" alt="React">
+          <img src="fotos/illus.png" alt="Illustrator">
+          <img src="fotos/c2.png" alt="Trello">
+        </div>
+
+        <h3 class="skills-exp-title">Tengo experiencia con</h3>
+        <p class="skills-exp-text">
+          Herramientas que utilizo para diseñar, desarrollar y organizar proyectos digitales.
+          Me permiten integrar la tecnología con la gestión, combinando análisis, diseño y
+          desarrollo web.
+        </p>
       </div>
     </section>
   </main>
