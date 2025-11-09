@@ -109,7 +109,7 @@ main {
 }
 .next:hover { transform: translate(-50%, 6px); }
 
-/* ========= LOMO GENÉRICO ========= */
+/* ========= LOMO ========= */
 
 .spine {
   position: absolute;
@@ -122,6 +122,23 @@ main {
     linear-gradient(90deg, transparent 40%, var(--spine-1) 52%, transparent 64%);
   box-shadow: 0 0 22px rgba(0,0,0,.7), inset 0 0 10px rgba(0,0,0,.55);
   z-index: 3;
+}
+
+/* ========= ELEMENTOS COMUNES ========= */
+
+.chapter {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 92px;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 86px; /* más grande */
+  color: var(--gold);
+  margin-bottom: 70px;
 }
 
 /* ========= PÁGINA 01 — SOBRE MÍ ========= */
@@ -144,28 +161,11 @@ main {
   background: var(--bg);
 }
 
-.chapter {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-size: 92px;
-  color: var(--gold);
-  margin-bottom: 40px;
-}
-
-.headline {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 128px;
-  color: var(--gold);
-  margin-bottom: 80px;
-}
-
 .intro {
   max-width: 640px;
   font-family: "Cormorant Garamond", serif;
   font-size: 30px;
   line-height: 1.5;
-  color: var(--text);
 }
 .intro p + p { margin-top: 14px; }
 
@@ -234,21 +234,16 @@ main {
   overflow: hidden;
 }
 
+/* Izquierda */
 .skills-left {
   position: absolute;
   top: 0;
   left: 0;
   width: 960px;
   height: 1080px;
-  padding: 80px 80px 40px 80px;
-}
-
-.skills-title {
-  margin-top: 120px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 72px;
-  color: var(--gold);
-  margin-bottom: 40px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
 }
 
 .skills-block {
@@ -256,7 +251,7 @@ main {
 }
 .skills-block h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 40px;
+  font-size: 34px;
   color: var(--gold);
   margin-bottom: 6px;
 }
@@ -266,6 +261,7 @@ main {
   color: var(--text);
 }
 
+/* Derecha */
 .skills-right {
   position: absolute;
   top: 0;
@@ -281,42 +277,44 @@ main {
 
 .skills-soft-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 52px;
+  font-size: 48px;
   color: var(--gold);
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .software-grid {
-  width: 760px;
-  height: 220px;
+  width: 640px;
+  height: 180px;
   background: rgba(255,255,255,0.04);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 28px;
-  margin-bottom: 60px;
-  box-shadow: 0 14px 40px rgba(0,0,0,0.55);
+  margin-bottom: 32px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+  border-radius: 6px;
 }
 .software-grid img {
-  max-height: 70px;
-  max-width: 120px;
+  max-height: 64px;
+  max-width: 110px;
   object-fit: contain;
 }
 
 .skills-exp-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 40px;
+  font-size: 28px;
   color: var(--gold);
-  align-self: flex-start;
-  margin: 10px 0 10px 80px;
+  margin-bottom: 8px;
 }
+
 .skills-exp-text {
-  max-width: 640px;
-  margin-left: 80px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 640px;
+  text-align: left;
 }
 
 /* ========= PÁGINA 03 — PROYECTOS ========= */
@@ -335,15 +333,7 @@ main {
   left: 0;
   width: 960px;
   height: 1080px;
-  padding: 80px 80px 40px 80px;
-}
-
-.projects-title {
-  margin-top: 120px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 72px;
-  color: var(--gold);
-  margin-bottom: 40px;
+  padding: 80px;
 }
 
 .project-block {
@@ -352,7 +342,7 @@ main {
 }
 .project-block h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 40px;
+  font-size: 34px;
   color: var(--gold);
   margin-bottom: 4px;
 }
@@ -387,7 +377,8 @@ main {
   max-height: 160px;
   object-fit: contain;
 }
-/* ========= PÁGINA 04 — CONTACTO (centrado y grande) ========= */
+
+/* ========= PÁGINA 04 — CONTACTO ========= */
 
 .contact {
   position: relative;
@@ -398,65 +389,48 @@ main {
   display: flex;
 }
 
-/* Lado izquierdo */
+/* Izquierda */
 .contact-left {
   width: 50%;
   height: 100%;
-  padding: 0 120px;
+  padding: 80px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* antes center */
   align-items: flex-start;
-}
-
-.chapter {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-size: 80px;
-  color: var(--gold);
-  margin-bottom: 20px;
-}
-
-.contact-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 60px;
-  color: var(--gold);
-  margin-bottom: 80px;
 }
 
 .mail-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
+  gap: 26px;
+  margin-top: 90px; /* baja el icono */
 }
 
 .mail-icon-wrap {
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(255,255,255,0.03), rgba(0,0,0,0.85));
+  background: radial-gradient(circle, rgba(255,255,255,0.03), rgba(0,0,0,0.9));
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.75);
 }
 
 .mail-icon {
-  width: 75px;
-  height: 75px;
+  width: 78px;
+  height: 78px;
   object-fit: contain;
-  filter: brightness(1.2);
 }
 
 .email {
   font-size: 22px;
   color: var(--gold);
   font-family: "Poppins", sans-serif;
-  letter-spacing: 0.3px;
 }
 
-/* Lado derecho */
+/* Derecha */
 .contact-right {
   width: 50%;
   height: 100%;
@@ -465,33 +439,34 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 26px;
 }
 
 .contact-subtitle {
   font-family: "Cormorant Garamond", serif;
-  font-size: 56px;
+  font-size: 46px;
   color: var(--gold);
   text-align: center;
-  margin-bottom: 40px;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
 .contact-buttons {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 18px;
 }
 
 .contact-btn {
   width: 320px;
-  padding: 16px 0;
+  padding: 14px 0;
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   font-family: "Cormorant Garamond", serif;
   color: var(--gold);
   border: 2px solid var(--gold);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .contact-btn:hover {
@@ -502,7 +477,6 @@ main {
 .qr {
   width: 150px;
   height: 150px;
-  margin-top: 10px;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
+  margin-top: 10px;
 }
