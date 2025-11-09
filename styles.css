@@ -1,6 +1,5 @@
 :root {
   --bg:       #1E1B1B;
-  --bg-curve: #181515;
   --bg-right: #181515;
   --ivory:    #F1EADF;
   --gold:     #C8A24C;
@@ -25,7 +24,8 @@ main {
   align-items: center;
 }
 
-/* ===================== PORTADA ===================== */
+/* ========= PORTADA ========= */
+
 .cover {
   position: relative;
   width: 1920px;
@@ -107,18 +107,9 @@ main {
   font-size: 38px;
   transition: 0.25s;
 }
-.next:hover {
-  transform: translate(-50%, 6px);
-}
+.next:hover { transform: translate(-50%, 6px); }
 
-/* ===================== SOBRE MÍ ===================== */
-.about {
-  position: relative;
-  width: 1920px;
-  height: 1080px;
-  background: var(--bg);
-  overflow: hidden;
-}
+/* ========= LOMO GENÉRICO ========= */
 
 .spine {
   position: absolute;
@@ -131,6 +122,16 @@ main {
     linear-gradient(90deg, transparent 40%, var(--spine-1) 52%, transparent 64%);
   box-shadow: 0 0 22px rgba(0,0,0,.7), inset 0 0 10px rgba(0,0,0,.55);
   z-index: 3;
+}
+
+/* ========= PÁGINA 01 — SOBRE MÍ ========= */
+
+.about {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: var(--bg);
+  overflow: hidden;
 }
 
 .left-page {
@@ -166,6 +167,7 @@ main {
   line-height: 1.5;
   color: var(--text);
 }
+.intro p + p { margin-top: 14px; }
 
 .left-footer {
   position: absolute;
@@ -176,15 +178,10 @@ main {
   align-items: center;
   gap: 14px;
   font-size: 14px;
-  color: var(--text);
   opacity: 0.95;
 }
+.left-footer .sep { color: var(--gold); }
 
-.left-footer .sep {
-  color: var(--gold);
-}
-
-/* Derecha: foto */
 .right-page {
   position: absolute;
   top: 0;
@@ -204,13 +201,11 @@ main {
   flex-direction: column;
   align-items: center;
 }
-
 .portrait {
   width: 620px;
   border-radius: 4px;
   box-shadow: 0 18px 60px rgba(0,0,0,0.6);
 }
-
 .portrait-block::after {
   content: "✧";
   position: absolute;
@@ -220,18 +215,17 @@ main {
   color: #E5E1DC;
   text-shadow: 0 0 6px rgba(255,255,255,0.4);
 }
-
 .portrait-block figcaption {
   margin-top: 16px;
   font-size: 12px;
   font-style: italic;
-  color: var(--text);
   opacity: 0.8;
   text-align: center;
   max-width: 700px;
 }
 
-/* ===================== HABILIDADES ===================== */
+/* ========= PÁGINA 02 — HABILIDADES ========= */
+
 .skills {
   position: relative;
   width: 1920px;
@@ -260,21 +254,18 @@ main {
 .skills-block {
   margin-bottom: 40px;
 }
-
 .skills-block h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 40px;
   color: var(--gold);
   margin-bottom: 6px;
 }
-
 .skills-block p {
   font-family: "Cormorant Garamond", serif;
   font-size: 22px;
   color: var(--text);
 }
 
-/* Derecha */
 .skills-right {
   position: absolute;
   top: 0;
@@ -295,7 +286,6 @@ main {
   margin-bottom: 40px;
 }
 
-/* Caja gris para los logos */
 .software-grid {
   width: 760px;
   height: 220px;
@@ -308,14 +298,12 @@ main {
   margin-bottom: 60px;
   box-shadow: 0 14px 40px rgba(0,0,0,0.55);
 }
-
 .software-grid img {
   max-height: 70px;
   max-width: 120px;
   object-fit: contain;
 }
 
-/* Texto de experiencia */
 .skills-exp-title {
   font-family: "Cormorant Garamond", serif;
   font-size: 40px;
@@ -323,13 +311,198 @@ main {
   align-self: flex-start;
   margin: 10px 0 10px 80px;
 }
-
 .skills-exp-text {
   max-width: 640px;
+  margin-left: 80px;
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   line-height: 1.5;
+}
+
+/* ========= PÁGINA 03 — PROYECTOS ========= */
+
+.projects {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.projects-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 960px;
+  height: 1080px;
+  padding: 80px 80px 40px 80px;
+}
+
+.projects-title {
+  margin-top: 120px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 72px;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+
+.project-block {
+  margin-bottom: 32px;
+  max-width: 620px;
+}
+.project-block h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.project-block p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  line-height: 1.5;
   color: var(--text);
-  align-self: flex-start;
-  margin-left: 80px;
+}
+
+.projects-right {
+  position: absolute;
+  top: 0;
+  left: 960px;
+  width: 960px;
+  height: 1080px;
+  background: var(--bg-right);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.project-logo {
+  max-width: 260px;
+  max-height: 160px;
+  object-fit: contain;
+}
+/* ========= PÁGINA 04 — CONTACTO (centrado y grande) ========= */
+
+.contact {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: var(--bg);
+  overflow: hidden;
+  display: flex;
+}
+
+/* Lado izquierdo */
+.contact-left {
+  width: 50%;
+  height: 100%;
+  padding: 0 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.chapter {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 80px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.contact-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 60px;
+  color: var(--gold);
+  margin-bottom: 80px;
+}
+
+.mail-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.mail-icon-wrap {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255,255,255,0.03), rgba(0,0,0,0.85));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.mail-icon {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
+.email {
+  font-size: 22px;
+  color: var(--gold);
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* Lado derecho */
+.contact-right {
+  width: 50%;
+  height: 100%;
+  background: var(--bg-right);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 56px;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-btn {
+  width: 320px;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+.qr {
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
 }
